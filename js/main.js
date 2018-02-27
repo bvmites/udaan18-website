@@ -113,7 +113,6 @@ function selectCartridge(mouseEvent) {
   }
   var centerPoint = getAbsoluteCenter(selectedCartridge);
   var section = getActiveSection();
-  console.log('active-section', section);
 
   resetAllCartridges(selectedCartridge);
 
@@ -136,6 +135,9 @@ function selectCartridge(mouseEvent) {
 }
 
 function insertCartridge(mouseEvent) {
+  if(getConsoleState() !== 'visible') {
+    return;
+  }
   var cartridge = mouseEvent.currentTarget;
   if (!cartridge.classList.contains('cartridge--selected'))
     return;
@@ -252,7 +254,17 @@ function setConsoleState(state) {
   var section = getActiveSection();
   var consoleTopViewTopHalf = section.querySelector(
     '.console-top-view--top-half');
+  if(state === 'hidden') {
+    resetAllCartridges(section);
+  }
   return consoleTopViewTopHalf.setAttribute('data-state', state);
+}
+
+function getConsoleState() {
+  var section = getActiveSection();
+  var consoleTopViewTopHalf = section.querySelector(
+    '.console-top-view--top-half');
+  return consoleTopViewTopHalf.getAttribute('data-state');
 }
 
 /*========================================================================================
