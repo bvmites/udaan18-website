@@ -143,9 +143,9 @@ function insertCartridge(mouseEvent) {
     return;
   var section = getActiveSection();
   var consoleTopView = section.querySelector('.console-top-view--top-half');
-  var cartridgeClippingPercent = 0.35;
+  var cartridgeClippingPercent = 0.15;
   if (getMedia().indexOf('xs portrait') > -1) {
-    cartridgeClippingPercent *= 1.45;
+    cartridgeClippingPercent *= 0.95;
   }
   var cartridgeClippingHeight = (cartridge.clientHeight) * (1 - cartridgeClippingPercent);
   var point = consoleTopView.offsetTop - cartridge.offsetTop - cartridgeClippingHeight;
