@@ -29,76 +29,62 @@
   <link rel="stylesheet" href="css/flexboxgrid.min.css">
   <link rel="stylesheet" href="css/media-query.css">
   <link rel="stylesheet" href="css/other-pages.css">
+  <link rel="contents" type="application/json" title="Team Udaan" href="teamudaan.json">
 
   <!-- Greensock Library -->
   <script src="js/vendor/greensock/TweenMax.min.js"></script>
 
   <!-- Custom JS -->
   <script src="js/other-pages.js"></script>
+
+  <!-- Team Udaan Data -->
+  <script src="js/data.team-udaan.js"></script>
 </head>
 
 <body class="font-family--press-start-2p">
-<script src="js/loading.js"></script>
+<script src="js/loading.js">
+</script>
 
-<section id="udaan-nights">
-  <div class="wrapper">
-    <h1 id="logo-text-udaan" class="font--orbitron">UDAAN</h1>
-    <h2 id="logo-text-nights" class="font--yellowtail">Nights</h2>
-    <div class="logo-triangle-wrapper">
-      <svg class="logo-triangle" width="400" height="300" viewBox="0 0 400 300">
-        <defs>
-          <linearGradient id="grad1" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:rgb(50,50,50);stop-opacity:1"/>
-            <stop offset="100%" style="stop-color:black;stop-opacity:1"/>
-          </linearGradient>
-        </defs>
-        <filter id="dropshadow" height="130%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
-          <feOffset dx="2" dy="2" result="offsetblur"/>
-          <feMerge>
-            <feMergeNode/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
-        <polygon points="0,0 400,0 200,300" stroke="#36e2f8" stroke-width="3"/>
-      </svg>
+<section id="udaan-event-partners">
+  <div class="header">
+    <div class="header-image">
+      <img src="img/coin.png"/>
     </div>
+    <span class="title">EVENT PARTNERS</span>
   </div>
   <div class="content font-family--press-start-2p">
-    <div class="block-container row">
-      <div class="block col-lg-4 col-md-6 col-sm-6 col-xs-12" data-href="">
-        <div class="block-content">
+    <div class="partners-block-container row">
+      <div class="partners-block col-lg-4 col-md-6 col-sm-6 col-xs-12" data-href="">
+        <div class="partners-block-content">
           <div class="fill">
-            <img src="img/nights/subharambh.png"/>
+            <img src="img/sponsors/ice.png"/>
           </div>
         </div>
       </div>
-      <div class="block col-lg-4 col-md-6 col-sm-6 col-xs-12" data-href="">
-        <div class="block-content">
+      <div class="partners-block col-lg-4 col-md-6 col-sm-6 col-xs-12" data-href="">
+        <div class="partners-block-content">
           <div class="fill">
-            <img src="img/nights/kurukshetre.png"/>
+            <img src="img/sponsors/overseas.png"/>
           </div>
         </div>
       </div>
-      <div class="block col-lg-4 col-md-6 col-sm-6 col-xs-12" data-href="">
-        <div class="block-content">
+      <div class="partners-block col-lg-4 col-md-6 col-sm-6 col-xs-12" data-href="">
+        <div class="partners-block-content">
           <div class="fill">
-            <img src="img/nights/edm.png"/>
+            <img src="img/sponsors/khodiyar.png"/>
           </div>
         </div>
       </div>
-      <div class="block col-lg-4 col-md-6 col-sm-6 col-xs-12" data-href="">
-        <div class="block-content">
+      <div class="partners-block col-lg-4 col-md-6 col-sm-6 col-xs-12" data-href="">
+        <div class="partners-block-content">
           <div class="fill">
-            <img src="img/nights/kalrav.png"/>
+            <img src="img/sponsors/endeavor.png"/>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <div class="media-query"></div>
 </body>
 </html>
